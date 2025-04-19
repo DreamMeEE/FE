@@ -1,0 +1,286 @@
+.SearchStep {
+  margin-top: $top-bar-height;
+  padding: 25px;
+  padding-bottom: 105px;
+  position: relative;
+
+  .StepProgressList {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+    position: sticky;
+  }
+
+  .StepProgressItem {
+    width: 50px;
+    height: 4px;
+    border-radius: 100px;
+    flex: 1;
+    background-color: #eeeeee;
+
+    &.isActive {
+      background-color: #0079ff;
+    }
+  }
+
+  .MoveButtonGroup {
+    display: flex;
+    gap: 10px;
+    padding: 11px 25px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 100%;
+    max-width: $max-width;
+    background-color: #fff;
+
+    .PrevButton {
+      background: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      color: rgba(0, 0, 0, 0.2);
+      height: 57px;
+      border-radius: 15px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.02;
+    }
+
+    .CloseButton {
+      background: #868686;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      color: #fff;
+      height: 57px;
+      border-radius: 15px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.02;
+    }
+
+    .NextButton {
+      background: #0079ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      color: #fff;
+      height: 57px;
+      border-radius: 15px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.02;
+    }
+  }
+
+  .Step1 {
+    .Question {
+      margin-top: 26px;
+      color: #000;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    .AnswerContainer {
+      margin-top: 26px;
+
+      .Teacher {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .TeacherIcon {
+          width: 50px;
+          height: 52px;
+        }
+
+        .Tooltip {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #0d0d0d;
+          border-radius: 10px;
+          padding: 5px 10px;
+          color: #fff;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          letter-spacing: -0.02;
+        }
+
+        .PolygonLeftIcon {
+          position: absolute;
+          left: -10px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 13px;
+          height: 13px;
+        }
+      }
+
+      .AnswerList {
+        display: flex;
+        flex-direction: column;
+        margin-top: 13px;
+        gap: 16px;
+        width: 100%;
+      }
+
+      .AnswerItem {
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #e7e7e7;
+        background: #f6f6f6;
+
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.01;
+
+        white-space: pre-wrap;
+      }
+
+      .AnswerImage {
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        border: 1px solid #e7e7e7;
+        background: #fff;
+
+        img {
+          width: 234px;
+        }
+      }
+    }
+  }
+}
+
+.AnalyticsLoadingPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .Middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .LoadingBar {
+      animation: rotate-loading 1s linear infinite;
+      transform-origin: 50% 50%;
+    }
+
+    .LoadingBarIcon {
+      width: 25px;
+      height: 25px;
+    }
+
+    .CloudIconGroup {
+      margin-top: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .CloudIcon {
+      width: 59px;
+      height: 39px;
+    }
+
+    .TextGroup {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+
+      .TextTop {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .TextBottom {
+        color: #9f9696;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+
+  .Bottom {
+    position: absolute;
+    bottom: 75px;
+
+    .DreamMeIcon {
+      width: 124px;
+      height: 33px;
+    }
+  }
+}
+
+@keyframes rotate-loading {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// 모든 스텝의 classname이 Step1으로 설정했음
+.Step1 {
+  .DreamImage {
+    .DreamImageLoading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 334px;
+      border-radius: 15px;
+      border: 1px solid #e7e7e7;
+      background: #fff;
+
+      color: #000;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+      letter-spacing: -0.16px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+      border: 1px solid #e7e7e7;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.OneMonthRadialChart {
+  //position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  background-color: white;
+
+  .RadialChartList {
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: auto;
+    border-bottom: 1px solid #ededed;
+    margin-top: -13px;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    .RadialChartItem {
+      align-self: start; /* 상단 정렬 */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .Day {
+        color: #939393;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.14px;
+        margin-bottom: 5px;
+      }
+
+      .Date {
+        color: #000;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.14px;
+
+        &.isToday {
+          color: #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100px;
+          background: #ff4242;
+          width: 21px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+:root {
+  --primary: #c90000;
+  --secondary: #00034d;
+}
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+$max-width: 700px;
+$status-bar-height: 54px;
+$top-bar-height: 48px;
+
+*,
+body,
+html {
+  font-family: "Pretendard Variable", san-serif;
+}
+
+@import "./src/utils/styles/getColor";

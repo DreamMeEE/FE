@@ -1,0 +1,15 @@
+$base-color: (
+  primary: var(--primary),
+  secondary: var(--secondary),
+);
+
+@function getBaseColor($find-color: black) {
+  // color가 base-color map에 있는지 확인
+  // color가 base-color에 있으면 해당 color를 가져오고 없다면 black으로 return
+  $is-valid-color: index(map-keys($base-color), $find-color);
+  @if ($is-valid-color) {
+    @return map-get($base-color, $find-color);
+  }
+  @error "base-color에는 #{$find-color} 색상이 존재하지 않습니다.";
+  @return map-get($base-color, black);
+}

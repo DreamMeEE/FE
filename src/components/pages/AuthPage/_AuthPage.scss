@@ -1,0 +1,44 @@
+.AuthContainer {
+  background: linear-gradient(180deg, #c8e7ff 0%, #fff 70.48%);
+  height: 100vh;
+  position: relative;
+  padding-bottom: 26px;
+  padding-top: 51px;
+
+  .LogoContainer {
+    padding: 0 13px;
+  }
+
+  .LoginBanner {
+    padding: 0 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 416px;
+    }
+  }
+
+  .ButtonGroup {
+    width: 100%;
+    padding: 0 25px;
+    position: absolute;
+    bottom: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+
+    .NonLoginButton {
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.02;
+    }
+  }
+}

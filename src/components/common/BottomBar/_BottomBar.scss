@@ -1,0 +1,38 @@
+.BottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  max-width: $max-width;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 64px;
+  background-color: #fff;
+  border-top: 1px solid #ededed;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+    color: #292929;
+
+    label {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    &.isActive {
+      color: #0079ff;
+    }
+
+    .Icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

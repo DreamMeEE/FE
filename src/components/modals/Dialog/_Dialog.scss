@@ -1,0 +1,132 @@
+.DialogContainer {
+  .Overlay {
+    background-color: black;
+    opacity: 0.7;
+    position: fixed;
+    inset: 0;
+    animation: overlayShow 400ms cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1001;
+  }
+
+  .Content {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    max-width: 400px;
+    transform: translate(-50%, -50%);
+    padding: 32px 16px;
+    z-index: 1002;
+    background-color: white;
+    border-radius: 20px;
+    transition: transform 0.3s;
+  }
+
+  .Title {
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+  }
+
+  .Controls {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+
+    .Button {
+      font-weight: 600;
+      color: black;
+      width: 100%;
+
+      height: 52px;
+      border-radius: 26px;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      box-sizing: border-box;
+    }
+    .Confirm {
+      color: #747272;
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  @keyframes overlayShow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.7;
+    }
+  }
+
+  .CategoryDetailContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .CategoryContainerTitle {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    margin-bottom: 5px;
+  }
+
+  .CategoryContainerSubTitle {
+    color: #939393;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 19px;
+  }
+
+  .CategoryList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .CategoryItem {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .CategoryName {
+    flex-shrink: 0;
+    border-radius: 118.919px;
+    width: 44px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    text-align: center;
+    font-size: 14.27px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.143px;
+  }
+
+  .CategoryDesc {
+  }
+}

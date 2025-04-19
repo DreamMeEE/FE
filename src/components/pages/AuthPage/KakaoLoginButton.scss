@@ -1,0 +1,26 @@
+.Button {
+  background-color: #fee500;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 16px;
+
+  // text
+  color: #431f0a;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.02;
+
+  .Icon {
+    position: absolute;
+    left: 14px;
+  }
+}

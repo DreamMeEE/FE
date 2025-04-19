@@ -1,0 +1,110 @@
+.SearchPageContainer {
+  padding: 23px;
+  padding-top: 68px;
+  position: relative;
+
+  .UserProfileButton {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+
+    .ProfileIcon {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .LogoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .LogoContainer {
+    .SearchCharacterImage {
+      display: block;
+      width: 206px;
+    }
+
+    .Title {
+      text-align: center;
+      color: #000;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+  }
+
+  .SearchGroup {
+    margin-top: 60.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    //width: 100%;
+
+    form {
+    }
+
+    .Tooltip {
+      position: absolute;
+      top: -40px;
+      left: 0;
+    }
+
+    form {
+      display: flex;
+      flex: 1;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input {
+      height: 50px;
+      display: flex;
+      flex: 1;
+      border-radius: 100px;
+      background: #f7f7f7;
+      padding: 14.5px 20px;
+      width: 100px;
+      color: #000;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: -0.02;
+
+      &::placeholder {
+        opacity: 0.2;
+        color: #000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: -0.02;
+      }
+    }
+
+    .SearchButton {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      background: #161616;
+      width: 57px;
+      height: 57px;
+
+      .SearchIcon {
+        width: 28px;
+        height: 28px;
+        color: #ffffff;
+      }
+    }
+  }
+}

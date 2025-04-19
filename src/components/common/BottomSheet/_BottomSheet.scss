@@ -1,0 +1,42 @@
+.DialogOverlay {
+  background-color: #22222270;
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+  height: 90vh;
+  position: fixed;
+  width: 100%;
+  max-width: $max-width;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0;
+  z-index: 1000;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: transform 0.3s;
+  animation: contentShow 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    transform: translate(-50%, 100%);
+  }
+  to {
+    transform: translateY(-50%, 0);
+  }
+}

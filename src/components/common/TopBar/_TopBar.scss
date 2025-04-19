@@ -1,0 +1,50 @@
+.TopBar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: #fff;
+  height: $top-bar-height;
+  width: 100%;
+  max-width: $max-width;
+  border-bottom: 1px solid #ededed;
+  padding: 0 24px;
+
+  .Left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    .PrevButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    .LeftIcon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .LeftText {
+      color: #000;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+
+  .RightText {
+    color: #9f9696;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
